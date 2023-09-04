@@ -2,9 +2,10 @@ def get_unique_list(list):
     new_list=[]
     i = 0
     while i<len(list):
-        if list.count(list[i]) == 1:                 
+        if list[i] not in new_list:                
             new_list.append(list[i])
-    i=i+1
+        i=i+1
+    
     return new_list
     
 def main():
