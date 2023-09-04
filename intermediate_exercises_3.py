@@ -1,11 +1,10 @@
 def letter_count(string):
   new_dict={}
   
-  #u=list(set(string))  #more efficient
-  u=string
   i=0
-  while i<len(u):
-    new_dict.update({u[i] : str(string.count(u[i]))})
+  while i<len(string):
+    if string[i] not in new_dict:
+        new_dict.update({string[i] : str(string.count(string[i]))})
     i=i+1
     
   return new_dict
